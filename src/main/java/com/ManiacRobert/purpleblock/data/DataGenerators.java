@@ -1,7 +1,7 @@
 package com.ManiacRobert.purpleblock.data;
 
 import com.ManiacRobert.purpleblock.PurpleBlock;
-import com.ManiacRobert.purpleblock.data.client.itemModels;
+import com.ManiacRobert.purpleblock.data.client.ModItemModelProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,8 +17,7 @@ public final class DataGenerators {
         DataGenerator gen = event.getGenerator();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-
-        gen.addProvider(new itemModels(gen, existingFileHelper));
+        gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
 
     }
 }
